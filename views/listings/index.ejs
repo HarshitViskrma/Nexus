@@ -34,6 +34,29 @@
             padding: 0.5rem;
             height: 2.7rem;
         }
+        @media (min-width: 300px) and (max-width: 600px) {
+            #filters {
+                overflow-x: scroll;
+                flex-wrap: nowrap;
+                scrollbar-width: none; /* For Firefox */
+            }
+            .filter {
+                margin-right: 1rem;
+            }
+            .tax-toggle {
+                margin-left: 1rem;
+            }
+            .tax-toggle .form-check-label {
+                font-size: 0.7rem;
+            }
+            .tax-toggle label {
+                display: none;
+            }
+            .cards-container {
+                width: 90vw;
+                margin: auto;
+            }
+        }
     </style>
     
     <div id="filters">
@@ -88,7 +111,7 @@
             </div>
         </div>
     </div>
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 cards-container">
         <% for (let listing of allListings) { %>
             <a href="/listings/<%= listing._id %>" class="listing-link">
                 <div class="card col listing-card">

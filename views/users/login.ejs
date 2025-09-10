@@ -1,8 +1,26 @@
 <% layout("/layouts/boilerplate") %>
-
-<div class="row mt-3">
-    <div class="col-6 offset-3">
-        <h1>LogIn on Wander Lust</h1>
+<style>
+    .login-link {
+    text-decoration: none;
+    color: #222222;
+    font-weight: 500;
+  }
+  .login-link:hover {
+    text-decoration: underline;
+    color: #fe434d;
+  }
+    @media (min-width: 300px) and (max-width: 768px) {
+    .box {
+      width: 90% !important;
+      margin: auto !important;
+      padding: 1rem !important;
+    }
+  }
+</style>
+<div class="row my-3">
+    <div class="col-6 offset-3 box">
+        <h1 class="f-info-name">LogIn on N E X U S</h1>
+        <p>Please enter your credentials to continue.</p>
         <br>
         <form action="/login" method="POST" class="needs-validation" novalidate>
             <div class="mb-3">
@@ -15,7 +33,13 @@
                     <input name="password" id="password" type="password" class="form-control" required>
                     <div class="valid-feedback">Looks Good!</div>
             </div>
-            <button class="btn btn-dark">LogIn</button>
+            <div class="mb-3">
+                <button class="btn btn-dark">LogIn</button>
+                <span class="mt-3 mx-4">
+                    Don't have an account?
+                    <a href="/signup" class="login-link">SignUp here</a>
+                </span>
+            </div>
         </form>
     </div>
 </div>

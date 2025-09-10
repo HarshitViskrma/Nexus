@@ -1,8 +1,17 @@
 <% layout("/layouts/boilerplate") %>
+<style>
+    @media (min-width: 300px) and (max-width: 768px) {
+    .box {
+      width: 90% !important;
+      margin: auto !important;
+      padding: 1rem !important;
+    }
+  }
+</style>
 <body>
     <div class="row">
-        <div class="col-8 offset-2">
-            <h2>Edit your home details!</h2>
+        <div class="col-8 offset-2 box">
+            <h2 class="f-info-name">Edit your home details!</h2>
             <hr>
             <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
                 <div class="mb-3">

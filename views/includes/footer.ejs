@@ -1,16 +1,106 @@
-<footer> 
-    <div class="f-info">
-        <br><br><br>
-        <div class="f-info-socials">
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
-        </div>
-        <div class="f-info-brand">&copy; Wander Lust Private Limited</div>
-        <div class="f-info-links">
-            <a href="/privacy">Privacy </a>
-            <a href="/terms"> Terms</a>
-        </div>
-        <br><br>
+<style>
+  .f-info-links a {
+    text-decoration: none;
+    color: #222222;
+  }
+
+  .f-info-links a:hover {
+    text-decoration: underline;
+  }
+
+  .f-info-links,
+  .f-info-socials,
+  .f-info-brand,
+  .f-info-explore-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .f-info-socials i {
+    font-size: 1.9rem;
+    margin-right: 1rem;
+    color: #fe434d;
+    opacity: 0.9;
+  }
+  .f-info-socials i:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .f-info {
+    text-align: center;
+    display: flex;
+    height: 50vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 14rem 0 14rem;
+  }
+  .f-info-name {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: #222222;
+  }
+  .explore-btn {
+    text-decoration: none;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    background-color: #fe434d;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .explore-btn:hover {
+    background-color: #222222;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  @media (min-width: 300px) and (max-width: 768px) {
+    .f-info {
+      height: auto;
+      padding: 1rem 2rem 1rem 2rem;
+    }
+    .f-info-name {
+      font-size: 1.8rem;
+    }
+    .f-info-socials {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+</style>
+
+<footer>
+  <hr />
+  <div class="f-info">
+    <div class="f-info-socials">
+      <h3 class="f-info-name">N e x u s</h3>
     </div>
+    <div class="f-info-brand">
+      <p>
+        Your trusted platform for discovering and booking unique accommodations
+        worldwide. Experience the world like local with Nexus. Join us today and
+        start earning by sharing your space with travelers from around the
+        world! <br>
+        Ready to embark on your next adventure?
+      </p>
+    </div>
+    <div class="f-info-explore-btn">
+      <a href="/listings" class="explore-btn">Explore</a>
+    </div>
+    <div class="f-info-links">
+      <a href="#">Privacy Policy</a>&nbsp; | &nbsp;
+      <a href="#"> Terms & Conditions</a>
+    </div>
+    <div class="f-info-socials">
+      <i class="fa-brands fa-square-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-linkedin"></i>
+    </div>
+  </div>
 </footer>

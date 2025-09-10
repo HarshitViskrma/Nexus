@@ -1,9 +1,19 @@
 <% layout("/layouts/boilerplate") %>
+<style>
+     @media (min-width: 300px) and (max-width: 768px) {
+    .box {
+      width: 90% !important;
+      margin: auto !important;
+      padding: 1rem !important;
+    }
+  }
+</style>
 <body>
     <div class="row">
-        <div class="col-8 offset-2">
+        <div class="col-8 offset-2 box">
             <div class="mb-2">
                 <h3>Add your home here!</h3>
+                <p>Join us today and start earning by sharing your space with travelers from around the world!</p>
             </div>
             <hr>
             <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">

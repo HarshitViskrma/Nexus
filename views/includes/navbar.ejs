@@ -20,18 +20,30 @@
     display: inline;
     margin-right: 0.5rem;
   }
+
+  @media (min-width:300px) and (max-width:768px) {
+    .search-input {
+      display: none;
+    }
+    .btn-search {
+      display: none;
+    }
+    .btn-search i {
+      display: none;
+    }
+  }
+
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass mx-2"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse bg-white my-2 px-5" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="/listings">Explore</a>
+          <a class="nav-link" href="/listings" id="tag">Explore</a>
         </div>
         <div class="navbar-nav ms-auto">
           <form class="d-flex" role="search">
@@ -50,6 +62,5 @@
           <% } %>
         </div>
       </div>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
     </div>
   </nav>
