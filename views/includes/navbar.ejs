@@ -20,6 +20,7 @@
     display: inline;
     margin-right: 0.5rem;
   }
+  
 
   @media (min-width:300px) and (max-width:768px) {
     .search-input {
@@ -37,14 +38,14 @@
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass mx-2"></i></a>
+      <div class="navbar-nav">
+          <a class="nav-link" href="/listings" id="tag" style="font-size: large; font-weight: 400;">N E X U S</a>
+        </div>
+      <!-- <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass mx-2"></i></a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse bg-white my-2 px-5" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="/listings" id="tag">Explore</a>
-        </div>
         <div class="navbar-nav ms-auto">
           <form class="d-flex" role="search">
             <input class="form-control me-2 search-input" type="search" placeholder="Search destinations"/>
@@ -52,7 +53,7 @@
           </form>
         </div>
         <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Add your home</a>
+          <a class="nav-link" href="/listings/new"><i class="fa-solid fa-plus"></i>&nbsp; Add New</a>
           <% if (!currentUser) { %>
           <a class="nav-link" href="/signup">Sign Up</a>
           <a class="nav-link" href="/login"><b>Log In</b></a>
