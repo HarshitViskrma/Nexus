@@ -36,7 +36,7 @@
         }
         @media (min-width: 300px) and (max-width: 600px) {
             .details-card-container {
-                width: 40% !important;
+                width: 100% !important;
                 height: auto !important;
                 display: flex !important;
                 flex-wrap: wrap !important;
@@ -117,20 +117,32 @@
             </div>
         </div>
     </div>
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 cards-container details-card-container">
+    <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 cards-container details-card-container">
         <% for (let listing of allListings) { %>
             <a href="/listings/<%= listing._id %>" class="listing-link">
                 <div class="card col listing-card">
                     <img src="<%= listing.image.url %>" class="card-img-top" alt="Listing image" style="height: 20rem";>
-                    <div class="card-img-overlay"></div>
-                    <div class="card-body pt-1">
-                        <p class="card-text"  style="color: #787878;">
+                    <div class="card-img-overlay">
+                        <p class="card-text" style="color: white; font-size: 0.8rem; background-color: rgba(0, 0, 0, 0.5); padding: 0.2rem 0.5rem; border-radius: 0.5rem;">
+                            <i class="fa-solid fa-location-dot"></i>&nbsp; <%= listing.location %>
+                        </p>
+
+                        <p class="card-text"  style="color: white; background-color: rgba(0, 0, 0, 0.3); padding: 0.2rem 0.5rem; font-size: 0.9rem; border-radius: 0.8rem; position: absolute; bottom: 0; left: 0; right: 0; margin-bottom: 0.6rem; margin-left: 0.5rem; margin-right: 0.5rem;">
                             &nbsp;&nbsp;&nbsp;&nbsp;<b><%= listing.title %></b>
                             <br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&#8377; <%= listing.price.toLocaleString("en-IN") %>/ Night
                             <span class="tax-info">&nbsp;  +18% GST</sp>
                             <br>
                         </p>
+                    </div>
+                    <div class="card-body pt-1">
+                        <!-- <p class="card-text"  style="color: #787878;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<b><%= listing.title %></b>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&#8377; <%= listing.price.toLocaleString("en-IN") %>/ Night
+                            <span class="tax-info">&nbsp;  +18% GST</sp>
+                            <br>
+                        </p> -->
                     </div>
                 </div>
             </a>

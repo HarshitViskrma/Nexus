@@ -51,13 +51,13 @@ body {
 }
 /* card effect */
 
-.card-img-overlay {
+/* .card-img-overlay {
   opacity: 0;
-}
+} */
 
 .card-img-overlay:hover {
-  opacity: 0.2;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  opacity: 1 !important;
 }
 
 .add-btn {
